@@ -1,0 +1,14 @@
+name: PR Gate 
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  pr-merge-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: '1.17.6'
+      - run: cicd/pr_gate.sh 
