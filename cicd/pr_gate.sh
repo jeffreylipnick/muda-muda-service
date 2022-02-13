@@ -5,4 +5,6 @@
 # from inside that directory.
 # Reference: https://stackoverflow.com/questions/9612090/how-to-loop-through-file-names-returned-by-find
 
-find . -name go.mod -execdir bash -c "go test || exit 1" {} \;
+set -e
+
+find . -name go.mod -execdir bash -c "go test" {} \;
