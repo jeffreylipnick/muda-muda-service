@@ -11,10 +11,7 @@
 #
 # This script does not handle file names that contain spaces.
 
-gofiles=$(git diff --name-only | grep '\.go$')
-[ -z "$gofiles" ] && exit 0
-
-unformatted=$(gofmt -l $gofiles)
+unformatted=$(gofmt -l .)
 [ -z "$unformatted" ] && exit 0
 
 # Some files are not gofmt'd. Print message and fail.

@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-go@v2
         with:
           go-version: '1.17.6'
-      - run: cicd/unit_tests.sh
+      - run: go test -v ./...
 
   formatting-check:
     runs-on: ubuntu-latest
