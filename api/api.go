@@ -1,12 +1,11 @@
-package api 
+package api
 
 import (
-    "fmt"
-    "net/http"
-
+	"fmt"
+	"net/http"
 )
 
 func HelloHandler(w http.ResponseWriter, r *http.Request) {
 
-    fmt.Fprintf(w, "Hello, there\n")
+	fmt.Fprintf(w, "Hello, there\n")
 }

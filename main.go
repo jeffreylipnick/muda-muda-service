@@ -10,8 +10,6 @@ import (
 
 func main() {
 
-
-
 	http.HandleFunc("/", api.HelloHandler)
 
 	fmt.Println("Server started at port 8080")
