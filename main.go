@@ -10,10 +10,10 @@ import (
 )
 
 func main() {
-    config := conf.NewConfig()
+	config := conf.NewConfig()
 
 	http.HandleFunc("/", api.HelloHandler)
 
 	fmt.Println("Server started at port 8080")
-	log.Fatal(http.ListenAndServe(":" + config.Port, nil))
+	log.Fatal(http.ListenAndServe(":"+config.Port, nil))
 }
